@@ -39,7 +39,7 @@ public:
   }
 
   int parse_config(boost::property_tree::ptree &cfg) {
-    freq = cfg.get<int>("frequency", 60);
+    freq = cfg.get<int>("decodeRates", 60);
     BOOST_LOG_TRIVIAL(info) << " Decode rates logging frequency (secs): " << freq;
     int nchars;
     std::string capture_dir = cfg.get<std::string>("captureDir", boost::filesystem::current_path().string());
