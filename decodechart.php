@@ -89,7 +89,7 @@ foreach ($decode as $decodeline) {
   if ($currenthour != date('YmdH', $decodeline[0])) {
     echo '
 <line class="chart-tick" x1="'.$datarow.'" x2="'.$datarow.'" y1="25" y2="425" />
-<text class="axisX" transform="rotate(-90)" y="'.$datarow.'" x="-425">'.date('Y-m-d H:m:s', $decodeline[0]).'</text>';
+<text class="axisX" transform="rotate(-90)" y="'.$datarow.'" x="-425">'.date('Y-m-d H:i:s', $decodeline[0]).'</text>';
     $currenthour = date('YmdH', $decodeline[0]);
   }
   unset($decodeline[0]);
